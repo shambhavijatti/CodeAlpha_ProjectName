@@ -70,24 +70,3 @@ contract CryptoLock {
     }
 }
 
-/*
-============================================================
- HOW TO COMPILE, DEPLOY & TEST ON REMIX IDE (remix.ethereum.org)
-============================================================
-1. Paste as Task4_CryptoLock.sol, compile with Solidity 0.8.20+.
-2. Deploy on "Remix VM (Cancun)" (no constructor args).
-3. Testing early-withdrawal is blocked:
-   - Set VALUE to "1" Ether at the top of the Deploy tab.
-   - Call "deposit" with _lockDurationInSeconds = 120 (2 minutes).
-   - Immediately call "withdraw" -> should revert with
-     "Funds are still locked". This proves early withdrawals are blocked.
-   - Call "timeUntilUnlock(yourAddress)" to see the countdown.
-4. Testing successful withdrawal after unlock:
-   - Redeploy (or use a fresh account) and deposit with a short duration,
-     e.g. 5 seconds.
-   - Wait 5+ real seconds (Remix VM advances block.timestamp with real
-     time between transactions), then call "withdraw" again -> it should
-     succeed and your test account's ETH balance should increase.
-   - Call "getDeposit(yourAddress)" afterward to confirm amount is now 0.
-============================================================
-*/
