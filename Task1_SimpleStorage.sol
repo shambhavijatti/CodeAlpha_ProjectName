@@ -37,25 +37,3 @@ contract SimpleStorage {
     }
 }
 
-/*
-============================================================
- HOW TO COMPILE, DEPLOY & TEST ON REMIX IDE (remix.ethereum.org)
-============================================================
-1. Go to https://remix.ethereum.org
-2. Create a new file: Task1_SimpleStorage.sol and paste this code.
-3. Open the "Solidity Compiler" tab (left sidebar), select compiler
-   version 0.8.20 (or any 0.8.x), click "Compile Task1_SimpleStorage.sol".
-4. Open the "Deploy & Run Transactions" tab.
-   - Environment: "Remix VM (Cancun)" is fine for testing.
-   - In the constructor field next to "Deploy", enter an initial value,
-     e.g. 0, then click "Deploy".
-5. Testing:
-   - Under "Deployed Contracts", expand the contract.
-   - Click "storedValue" (blue button) -> should show your initial value.
-   - Click "increment" (orange button) a few times, then click
-     "storedValue" again -> value should have gone up by 1 each time.
-   - Click "decrement" a few times -> value should go down by 1 each time.
-   - Click "getValue" -> confirms the same value is readable via the
-     explicit read function too.
-============================================================
-*/
