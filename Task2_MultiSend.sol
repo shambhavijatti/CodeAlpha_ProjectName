@@ -55,26 +55,3 @@ contract MultiSend {
     // Allows the contract to receive Ether directly (e.g. leftover dust)
     receive() external payable {}
 }
-
-/*
-============================================================
- HOW TO COMPILE, DEPLOY & TEST ON REMIX IDE (remix.ethereum.org)
-============================================================
-1. Paste this file into Remix as Task2_MultiSend.sol and compile with
-   Solidity 0.8.20+.
-2. Deploy using "Remix VM (Cancun)" environment (no constructor args needed).
-3. Testing multiSend:
-   - In Remix's account dropdown (top left of Deploy tab), copy 2-3 of the
-     test account addresses provided by Remix VM.
-   - Expand the deployed contract, find "multiSend".
-   - In the "recipients" field, enter the addresses as a JSON array, e.g.:
-     ["0xAddress1...","0xAddress2...","0xAddress3..."]
-   - At the top of the Deploy tab, set the "VALUE" field to something like
-     "0.3" Ether (make sure the unit dropdown says "Ether").
-   - Click the orange "multiSend" button to send the transaction.
-   - Switch to each recipient address in the account dropdown and check
-     their balance increased by the expected share (totalSent / count).
-4. Call "getBalance" to confirm any leftover dust (from division rounding)
-   stayed in the contract, then test "withdrawDust" to recover it.
-============================================================
-*/
