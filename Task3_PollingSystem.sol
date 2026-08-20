@@ -130,28 +130,3 @@ contract PollingSystem {
     }
 }
 
-/*
-============================================================
- HOW TO COMPILE, DEPLOY & TEST ON REMIX IDE (remix.ethereum.org)
-============================================================
-1. Paste as Task3_PollingSystem.sol, compile with Solidity 0.8.20+.
-2. Deploy on "Remix VM (Cancun)" (no constructor args).
-3. Testing:
-   - Call "createPoll" with:
-       _title: "Favorite Language"
-       _options: ["Solidity","Rust","Python"]
-       _durationInSeconds: 120   (2 minutes, for quick testing)
-   - Note the returned pollId (usually 0 for the first poll) via the
-     "PollCreated" event log or by calling "pollCount".
-   - Switch between different test accounts (top-left dropdown) and call
-     "vote" with (pollId, optionIndex) for each account, e.g. vote(0, 0).
-   - Try voting twice from the same account -> should revert with
-     "Address has already voted".
-   - Call "getVoteCount(0, 0)" etc. to see live tallies.
-   - Since Remix VM lets you simulate time, use "getPoll" to see endTime,
-     then either wait out the real duration or redeploy with a very short
-     _durationInSeconds (e.g. 5 seconds) and wait 5+ seconds before calling
-     "getWinner". Calling getWinner before endTime reverts with
-     "Poll has not ended yet", proving the time-lock works.
-============================================================
-*/
