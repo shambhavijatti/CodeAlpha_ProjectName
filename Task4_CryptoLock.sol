@@ -34,6 +34,7 @@ contract CryptoLock {
             d.unlockTime = newUnlockTime;
         }
 
+
         emit Deposited(msg.sender, msg.value, d.unlockTime);
     }
 
